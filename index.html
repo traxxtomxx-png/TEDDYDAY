@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Magical Teddy Day | For You</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="castle-bg"></div>
+    <div id="starfield"></div>
+    <canvas id="magicCanvas"></canvas>
+    
+    <div id="wand">🪄</div>
+
+    <div class="music-toggle" onclick="toggleMusic()">
+        <span id="musicIcon">🎵</span>
+    </div>
+
+    <div id="startScreen" class="overlay">
+        <h1 class="title-main">A Secret Spelled for You</h1>
+        <button class="magic-btn pulse" onclick="startExperience()">Click to enter my little magical world 🪄</button>
+    </div>
+
+    <div id="storyScreen" class="overlay hidden" style="opacity: 0;">
+        <div id="storyContent" class="story-text"></div>
+        <button class="magic-btn" id="nextBtn" onclick="nextSlide()">Next ✨</button>
+    </div>
+
+    <div id="teddyScreen" class="overlay hidden" style="opacity: 0;">
+        <h2 id="spellText" class="glow-text"></h2>
+        <div class="teddy-container" id="teddyContainer" onclick="hugTeddy()">
+            <div class="spell-circle"></div>
+            
+            <img src="tigu.png" class="teddy-svg" alt="Tigu" style="width: 250px; height: auto;">
+            
+        </div>
+        <p id="interactionHint" class="hint-text"></p>
+        <button id="letterBtn" class="magic-btn hidden" onclick="openLetter()">Click here for a special message 💌</button>
+    </div>
+
+    <div id="letterScreen" class="overlay hidden" style="opacity: 0;">
+        <div id="letter">
+            My Dearest Roshogolla,<br><br>
+            Just like this magic world, my love for you is endless and glowing 💖<br>I am falling in love with you more and more each day💗<br>I am obsessed with you babe 🩷<br>I love you myy cutiee teddy 💝<br> May mighty Tigu keep you warm when I am not around 🫠<br>(but amar ador jaate na kome 🥲💓)<br><br>
+            Happy Teddy Day my Love !!! 🧸✨
+        </div>
+        
+        <button class="magic-btn" onclick="location.reload()" style="margin-top: 40px;">Restart the Magic ↻</button>
+    </div>
+
+    <audio id="bgMusic" loop src="background-music.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
